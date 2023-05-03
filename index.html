@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulancias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+        <main>
+            <!--Inicio de sesion-->
+            <div class="contenedor__login">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <div  class="formulario__login .form">
+                        <h2 class="form__title">Iniciar Sesión</h2>
+                        <input class="form__input" id="user" type="text" placeholder="Usuario">
+                        <input class="form__input" id="password" type="password" placeholder="Contraseña">
+                        <h3 class="form__error" id="error_login">Usuario o Contraseña incorrecto</h3>
+                        <button class="form_button" id="btn__sesion">Entrar</button>
+                    </div>
+                    <!--Register-->
+                    <div class="formulario__register .form">
+                        <h2 class="form__title">Regístrarse</h2>
+                        <input class="form__input" id="regName" type="text" placeholder="Nombre completo">
+                        <input class="form__input" id="regEmail" type="email" placeholder="Correo Electronico">
+                        <input class="form__input" id="regUser" type="text" placeholder="Usuario">
+                        <input class="form__input" id="regPassword" type="password" placeholder="Contraseña">
+                        <h3 class="form__error" id="error_register"></h3>
+                        <button class="form_button" id="btn__registro">Regístrarse</button>
+                    </div>
+                </div>
+            </div>
+            <!--Ambulancias-->
+            <div class="mapa">
+                <!--Ambulancias-->
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31837.218946209774!2d-76.19628095!3d4.09098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e39c5c6c761990d%3A0x4b91b4e5ee425e42!2sTulu%C3%A1%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1682586734307!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <!--Ambulancias disponibles-->
+                <div class="disponibles" id="disponible"></div>
+                <!--Ambulancias en camino-->
+                <div class="send" id="send"></div>
+            </div>
+            <div class="btn">
+                <button id="btn__send" class="btn__send">Enviar Ambulancia</button>
+                <button id="log_out" class="btn__send">Cerrar sesión</button>
+            </div>
+            <div class="send_ambulancia">
+                <h2 class="form__title">Enviar Ambulancia</h2>
+                <h3 class="text">Seleccionar ambulancia</h3>
+                <select class="slect_ambulancia" id="selectAmbulancia"></select>
+                <input class="form__input" id="direccion" type="text" placeholder="Direccion">
+                <button class="form_button" id="btn__sendAmbulancia">Enviar</button>
+            </div>
+        </main>
+        <script src="./js/script.js"></script>
+</body>
+</html>
